@@ -1,0 +1,19 @@
+section {
+    width: 80%;
+    height: 200px;
+    background: aqua;
+    margin: auto;
+    padding: 10px;
+}
+div#one {
+    width: 15%;
+    height: 200px;
+    background: red;
+    background-color: #98acff ;
+    float: left;
+}
+div#two {
+    margin-left: 15%;
+    height: 200px;
+    background: black;
+}

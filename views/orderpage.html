@@ -1,0 +1,71 @@
+
+
+<div class="header">
+    <div class="container">
+        <a href="#/"><img src="img/icon.png  "/></a>
+    </div>
+</div>
+<div class="main" >
+  <div class="container" align="center">
+      <div>
+            <table class="table_own">
+                <tr>
+                    <td class="td_own">
+                            <table class="table table-striped" style="width:600px">
+                                <thead>
+                                <th style="width: 300px;">Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                </thead>
+                                <tbody ng-repeat="order_id in order_details" ng-init="cart_total()">
+                                <tr>
+                                    <td>{{order_id.name}}</td>
+                                    <td>{{order_id.quantity}}</td>
+                                    <td>{{order_id.price * order_id.quantity}}</td>
+
+                                </tr>
+                                </tbody>
+                                <tbody>
+                                <tr></tr>
+                                <tr>
+                                    <td class="td_own">Total</td>
+                                    <td></td>
+                                    <td class="td_own">{{total}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-danger btn-sm" ng-click="edit_order()" style="float: left">
+                        <span class="glyphicon glyphicon-cutlery"></span> Edit order</button></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div class="container" style="margin-left: 580px">
+        <table class="table_own">
+            <tr>
+                <td class="td_own"><input type="text" class="form-control" ng-model="cust_name" style="width: 400px; " placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td class="td_own"><input type="text" class="form-control" ng-model="cust_mail" style="width: 400px; " placeholder="Enter your Mail"></td>
+            </tr>
+            <tr>
+                <td class="td_own"><input type="text" class="form-control" ng-model="cust_phone" style="width: 400px" placeholder="Enter Mobile number"></td>
+            </tr>
+            <tr>
+                <td class="td_own"><textarea class="form-control" rows="5" ng-model="cust_msg" style="width: 400px" placeholder="Enter a message"></textarea></td>
+            </tr>
+            <tr align="right">
+                <td><button type="button" class="btn btn-primary btn-sm" ng-click="send_mail(cust_name,cust_mail,cust_phone,cust_msg)">
+                    <span class="glyphicon glyphicon-cutlery"></span> Place Order</button></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,106 @@
+<div class="header">
+        <div class="container">
+                <a href="#/"><img src="img/icon.png  "/></a>
+        </div>
+</div>
+<div class="main" >
+        <div class="container">
+
+                <div ng-repeat="product in products | filter:filtText" class="col-md-3" align="middle">
+                        <div class="thumbnail">
+                                <img ng-src="{{ product.cover }}">
+                                <p class="title" align="middle">{{ product.name }}
+                                <!--        <span ng-if="product.expanded" ng-click="product.expanded = false" class="fa fa-arrow-circle-up"></span>
+                                        <span ng-if="!product.expanded" ng-click="product.expanded = true" class="fa fa-arrow-circle-down"></span>
+                                <p ng-if="product.expanded" ng-repeat-end="" align="middle">{{product.description}}</p>
+                               -->
+                                <span class="glyphicon glyphicon-info-sign" ng-click="describe_me($index)"></span>
+                                </p>
+
+                                <p class="price">{{ product.price | currency }}</p>
+                                <!-- <p class="date" align="middle">{{ product.pubdate | date }}</p> -->
+
+                                        <div class="rating">
+                                                <p class="likes" ng-model="lbt" ng-click="plusOne($index,product)">+ {{ product.likes }} </p>
+                                                <p class="dislikes" ng-model="dbt" ng-click="minusOne($index,product)">-</p>
+                                        </div>
+
+                        </div>
+                </div>
+
+        </div>
+        <!-- shopping cart button start -->
+        <table align="right" class="table_own" style="margin-right: 120px">
+                <tr>
+                        <td>
+                                <button class="btn btn-primary" ng-click="show_order()">Checkout</button>
+                        </td>
+                </tr>
+        </table>
+
+
+</div>
+
+<footer class="footer-distributed">
+
+        <div class="footer-left">
+
+                <h3>Indian<span>food</span></h3>
+
+                <p class="footer-links">
+                        <a href="#">Home</a>
+                        ·
+                        <a href="#">Blog</a>
+                        ·
+                        <a href="#">Pricing</a>
+                        ·
+                        <a href="#">About</a>
+                        ·
+                        <a href="#">Faq</a>
+                        ·
+                        <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">Indian Food &copy; 2016</p>
+        </div>
+
+        <div class="footer-center">
+
+                <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>{{contact_details[0].flat}}</span>{{contact_details[0].city}}</p>
+                </div>
+
+                <div>
+                        <i class="fa fa-phone"></i>
+                        <p>{{contact_details[0].phone}}</p>
+                </div>
+
+                <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:{{contact_details[0].email}}">{{contact_details[0].email}}</a></p>
+                </div>
+
+        </div>
+
+        <div class="footer-right">
+
+                <p class="footer-company-about">
+                        <span>About the company</span>
+                        {{contact_details[0].briefing}}
+                </p>
+
+                <div class="footer-icons">
+
+                        <a href="#/"><i class="fa fa-facebook"></i></a>
+                        <a href="#/"><i class="fa fa-twitter"></i></a>
+                        <a href="#/"><i class="fa fa-linkedin"></i></a>
+                        <a href="#/"><i class="fa fa-github"></i></a>
+
+                </div>
+
+        </div>
+
+</footer>
+
+

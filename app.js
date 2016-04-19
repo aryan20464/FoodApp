@@ -154,7 +154,7 @@ app.controller('MainController', ['$scope', function($scope) {
         };
         message = {
             subject:"Greetings from Food shop",
-            text: "Hello "+c_name+","+"\n\n"+"Your total amount is "+full_order+"SEK"+"\n\n"+"Regards,"+"\n"+ "Aryan-Sandeep", //+full_order,
+            text: "<pre><h2>Hello</h2><img src='img/icon.png'/></pre> "+c_name+","+"\n\n"+"Your total amount is "+full_order+"SEK"+"\n\n"+"Regards,"+"\n"+ "Aryan-Sandeep", //+full_order,
             //text: $("#message-area").val(),
             from_email: "aryangajvelli2011@gmail.com",
             //from_email: $("#from-email").val(),
@@ -235,7 +235,7 @@ app.controller('MainController', ['$scope', function($scope) {
 
     // code for sending mail to customers ends!
 
-    $scope.contact_details=[{flat:"LGH-1202, Odalvagen 7",city:"Karlskrona, Blekinge",phone:"+46 767 85 2025",email:"aryangajvelli2011@gmail.com",briefing:"This is a premium website, we offer large buffet, hundered year old wine and mouth watering food"}];
+    $scope.contact_details=[{flat:"LGH-1202, Odalvagen 7",city:"Karlskrona, Blekinge",phone:"+46 767 85 2025",email:"aryangajvelli2011@gmail.com",briefing:"This is a premium website, we offer large buffet, hundred year old wine and mouth watering food"}];
 
 
 }]);
